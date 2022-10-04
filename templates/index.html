@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="antialiased bg-cover bg-center bg-no-repeat"
+    background="{{ url_for('static', filename='img/seasideOneUnedited.jpg') }}"
+  >
+    <div class="container mx-auto h-screen w-screen">
+      <div class="flex items-center justify-center h-full">
+        <div
+          class="backdrop-filter backdrop-blur-lg bg-opacity-30 shadow-2xl p-6 rounded-2xl bg-black"
+        >
+          <div class="flex flex-col">
+            <div class="text-right">
+              <h2
+                class="font-bold text-center"
+                style="
+                  font-family: 'Noto Sans Mono', monospace;
+                  color: #61c2a2;
+                  font-size: 25px;
+                "
+              >
+                Hisar, Haryana
+              </h2>
+            </div>
+            <div class="my-6">
+              <div class="flex flex-row space-x-4 items-center">
+                <div id="icon">
+                  <span>
+                    <svg
+                      class="w-20 h-20 fill-stroke text-yellow-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div id="temp">
+                  <h4
+                    class="text-4xl"
+                    style="
+                      font-family: 'Poppins', sans-serif;
+                      color: #09224e;
+                      font-size: 30px;
+                    "
+                  >
+                    {{temprature}}&deg;C
+                  </h4>
+                  <p
+                    class="text-xs text-gray-500"
+                    style="
+                      font-family: 'Poppins', sans-serif;
+                      color: #61c2a2;
+                      font-size: 20px;
+                    "
+                  >
+                    Humidity is {{humidity}}&percnt;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full place-items-end text-right border-t-2 border-gray-100 mt-2"
+            >
+              <a href="#" class="text-indigo-600 text-xs font-medium"
+                >View more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
